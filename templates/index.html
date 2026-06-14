@@ -84,6 +84,7 @@
         <h2>🛡️ Phishing Email Detector</h2>
         <p>Paste a suspicious email below to analyze its threat level using Machine Learning.</p>
 
+        <label for="emailInput">Email text</label>
         <textarea id="emailInput" placeholder="Paste email text here..."></textarea>
         <button onclick="analyzeEmail()">Scan Email</button>
 
@@ -104,7 +105,7 @@
             resultBox.style.display = 'none';
             resultBox.className = '';
 
-            if (!text) {
+            if (!text.trim()) {
                 alert("Please enter an email to scan.");
                 return;
             }
